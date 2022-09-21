@@ -11,9 +11,11 @@ jobs:
             echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip install --user -r requirements.txt
       - run:
-          name: Run unit tests
+          name: Run unit tests & Generate Test Report
           command: |
             python3 -m unittest tests/test_calculator.py
+            coverage -m unittest tests/test_calculator.py
+            coverage html
       - store_test_results:
           path: test-reports
       - store_artifacts:
