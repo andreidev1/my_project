@@ -13,7 +13,7 @@ Division
 * Int/floats as input - return the result
 * Strings as input - raise an exception
 * Ints/floats divided by 0 - raise ZeroDivision
-
+--
 Multiply
 * Int/floats as input - return result
 * Strings as input - raise an exception
